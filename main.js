@@ -14,7 +14,7 @@ button.addEventListener('click', () => {
     // console.log(cityInput);
 
     //Now Fetch Through Get API 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&APPID=${API_Key}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&APPID=${API_Key}`)
     //fetch(`http://api.openweathermap.org/data/2.5/forecast/daily?id=${cityInput}&cnt=${cnt}&appid=${API_Key}`)
         .then(res => res.json())
         .then(data => {
@@ -55,19 +55,6 @@ button.addEventListener('click', () => {
                                 `; 
                 
                  
-
-        });
-        fetch(`https://api.weatherbit.io/v2.0/forecast/3hourly?city=${cityInput}&key=${API_Key}`)
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-
-            //When Fill Input Field Then Clear Input Field
-            inputTxt.value = cityInput;
-
-            //Now Show All Data Value
-            
-                showData1.innerHTML = `${data.temp}`;
 
         });
 
