@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecasting</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-v4-rtl/4.6.0-2/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container1">
+      <h1>Weather App </h1><br>
+      <input type="text" class="inputTxt" placeholder="Enter City Name"> <br>
+      <input type="submit" value="Submit" class="btn"><br><br>
+      <div id="currentDateTime"></div>
+      <p>Date: <span id="datetime"></span></p>
+      <div class="showData"></div>
+    </div>
+  </div>
+  <script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "." + (("0" + (dt.getMonth() + 1)).slice(-2)) + "." + (dt.getFullYear()) + " Time: " + (("0" + dt.getHours()).slice(-2)) + "." + (("0" + dt.getMinutes()).slice(-2));
+  </script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
